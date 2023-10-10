@@ -104,5 +104,5 @@ alter user 'root'@'localhost' identified with mysql_native_password by '변경�
 - 외부 접속 허용하기
 ```bash
 vi /etc/mysql/mysql.conf.d/mysqld.cnf
-bind-address 주석처리\#
+bind-address 주석처리 #
 ```
