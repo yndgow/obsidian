@@ -73,7 +73,7 @@ sudo vi  /etc/ssh/sshd_config
 	외부에서 root 접속 ok 혹은 그대로 두기(키 필요)
 	( 65 : PasswordAuthentication no를 yes로 변경)
 sudo cp /home/ubuntu/.ssh/authorized_keys /root/.ssh
-sudo service sshd restart
+sudo service ssh restart
 ```
 
 4. root로 접속하기
@@ -97,7 +97,7 @@ password -> 그냥 엔터
 
 -  root 비밀번호 변경
 ```
-alter user 'root'@'localhost' identified with mysql_native_password by '변경할 비밀번호';
+alter user 'root'@'%' identified with mysql_native_password by '변경할 비밀번호';
 ```
 
 - 외부 접속 허용하기
