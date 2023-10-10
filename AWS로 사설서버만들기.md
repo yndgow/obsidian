@@ -41,9 +41,21 @@
 
 https://www.putty.org/
 
-![](https://i.imgur.com/XdRrwdR.png)
 
 
 ![](https://i.imgur.com/49vjAR3.png)
 
+
+![](https://i.imgur.com/5ETbC7K.png)
+
+
+ppk browse
+
+![](https://i.imgur.com/Ji8D70R.png)
+
+
+![](https://i.imgur.com/y6KrxOE.png)
+
+
+![](https://i.imgur.com/bJV6qPU.png)
 
