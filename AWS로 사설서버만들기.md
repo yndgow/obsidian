@@ -106,3 +106,4 @@ alter user 'root'@'localhost' identified with mysql_native_password by '변경�
 vi /etc/mysql/mysql.conf.d/mysqld.cnf
 bind-address 주석처리 #
 ```
+
