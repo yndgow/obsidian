@@ -110,7 +110,7 @@ bind-address 주석처리 #
 root 의 접속권한을 체크해서 전체접근허용을 해준다.
 ```
 create user 'root'@'%' identified by '비밀번호';
-GRANT ALL ON *.* TO root@'%';
+GRANT ALL PRIVILEGES ON *.* TO root@'%';
 FLUSH PRIVILEGES;
 ```
 
