@@ -65,9 +65,10 @@ ppk browse
 2. 해당 키페어를 이용하여 EC2 접속하기 (ec2-user)
     또는 브라우저에서 인스턴스 마우스 오른쪽 메뉴에서 연결
 1. 접속후 다음과 같은 순서로 변경합니다.```
-```
+```bash
 sudo passwd root
 sudo vi  /etc/ssh/sshd_config
+	라인 번호 확인 명령어 (:set number)
 	( 38 : PermitRootLogin no를 yes로 변경) 
 	외부에서 root 접속 ok 혹은 그대로 두기(키 필요)
 	( 65 : PasswordAuthentication no를 yes로 변경)
@@ -84,7 +85,24 @@ sudo service sshd restart
 
 
 
-### 6. mysql 설치하기
-1. apt-get update (ubuntu 업데이트)
-2. apt-get install mysql-server(mysql 설치, y 누르기)
-3. 
+### 6. mysql
+```
+apt-get update 
+apt-get install mysql-server 
+mysql -u root -p 
+password -> 그냥 엔터
+```
+
+
+![](https://i.imgur.com/xZEDb7G.png)
+
+-  root 비밀번호 변경
+```
+alter user 'root'@'localhost' identified with mysql_native_password by '변경할 비밀번호';
+```
+
+- 외부 접속 허용하기
+```bash
+vi /etc/mysql/mysql.conf.d/mysqld.cnf
+bind-address 주석처리\#
+```
