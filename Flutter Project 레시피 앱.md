@@ -19,26 +19,20 @@
 	4. 이미지 다운로드
 	![햄버거](https://i.imgur.com/08QntoO.jpg)
 	![커피](https://i.imgur.com/J346gPH.jpg)
-	![피자](https://i.imgur.com/0eMQM1s.jpg)<b
+	![피자](https://i.imgur.com/0eMQM1s.jpg)
 	5. 이미지, 폰트 넣기
-
+	
 		![](https://i.imgur.com/OUGYF4M.png)
+	6. pubspec.yaml 변경
+
+		![](https://i.imgur.com/3YDzn5p.png)
+		![](https://i.imgur.com/a87kne3.png)
+		![](https://i.imgur.com/CUf0pfI.png)
+		family : 사용할 이름(아래의 폰트를 지정한 이름을 사용하겠다)
+		![](https://i.imgur.com/ulxRbun.png)
 
 
-![](https://i.imgur.com/3YDzn5p.png)
-
-
-![](https://i.imgur.com/a87kne3.png)
-
-
-![](https://i.imgur.com/CUf0pfI.png)
-
-```
-family : 사용할 이름(아래의 폰트를 지정한 이름을 사용하겠다)
-```
-
-
-![](https://i.imgur.com/ulxRbun.png)
+## 2. 코드
 
 
 
