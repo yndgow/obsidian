@@ -10,6 +10,16 @@
 
 2. 패키지, 폴더 생성
 
-![](https://i.imgur.com/FZqQsml.png)
+	1. 기본 폴더, 패키지 생성
+		![](https://i.imgur.com/FZqQsml.png)
+
+
+![](https://i.imgur.com/hVD7oFj.png)
+
+
+[PatuaOne Font](https://fonts.google.com/specimen/Patua+One)
+
+
+![](https://i.imgur.com/OUGYF4M.png)
 
 
