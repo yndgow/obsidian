@@ -19,10 +19,10 @@
 	4. 이미지 다운로드
 	![햄버거](https://i.imgur.com/08QntoO.jpg)
 	![커피](https://i.imgur.com/J346gPH.jpg)
-	![피자](https://i.imgur.com/0eMQM1s.jpg)
+	![피자](https://i.imgur.com/0eMQM1s.jpg)<b
 	5. 이미지, 폰트 넣기
 
-	![](https://i.imgur.com/OUGYF4M.png)
+		![](https://i.imgur.com/OUGYF4M.png)
 
 
 ![](https://i.imgur.com/3YDzn5p.png)
