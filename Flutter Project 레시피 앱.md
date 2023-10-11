@@ -10,15 +10,13 @@
 
 2. 패키지, 폴더 생성
 	1. 기본 폴더, 패키지 생성
-
 		![](https://i.imgur.com/FZqQsml.png)
-
-	2. 하위 폴더 
-![](https://i.imgur.com/hVD7oFj.png)
-
-
-[PatuaOne Font](https://fonts.google.com/specimen/Patua+One)
-
+		
+	2. 하위 폴더 생성
+	![](https://i.imgur.com/hVD7oFj.png)
+	3. font 다운로드
+	[PatuaOne Font](https://fonts.google.com/specimen/Patua+One)
+	4. 
 
 ![](https://i.imgur.com/OUGYF4M.png)
 
