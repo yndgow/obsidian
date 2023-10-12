@@ -24,10 +24,11 @@ log4jdbc.auto.load.popular.drivers=false
 
 ## 3. application.yml Datasource 변경
 
+- 기존
 ![](https://i.imgur.com/b294wyM.png)
 
 
-
+- 변경
 
 ```
 driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
