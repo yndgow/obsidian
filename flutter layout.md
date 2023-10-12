@@ -15,3 +15,19 @@
 
 
 ### 2. 폴더 구조 잡기
+
+
+
+
+
+
+
+
+- 이미지
+![](https://i.imgur.com/MQ4Bief.png)
+
+- pubspec.yaml
+```yaml
+assets:  
+  - assets/lake.jpg
+```
