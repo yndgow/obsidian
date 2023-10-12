@@ -10,6 +10,7 @@
 
 
 ## 2. 파일 추가
+- resource 하위에 추가
 
 ![[log4jdbc.log4j2.properties]]
 
@@ -22,16 +23,30 @@ log4jdbc.drivers=com.mysql.cj.jdbc.Driver
 log4jdbc.auto.load.popular.drivers=false
 ```
 
-## 3. application.yml Datasource 변경
+## 3. application.yml 수정
 
 - 기존
+
 ![](https://i.imgur.com/b294wyM.png)
 
 
-- 변경
+- 수정( name 변경, url log4jdbc 추가)
 
-```
+```yml
 driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
 url: jdbc:log4jdbc:mysql://localhost:3306/CUGGI?serverTimeZone=Asia/Seoul
 ```
 
+- 추가
+
+```yaml
+logging:
+  level:
+    jdbc:
+	  sqlonly: info
+	  sqltiming: off
+	  resultsettable: info
+	  audit: off
+	  resultset: off
+	  connection: off
+```
