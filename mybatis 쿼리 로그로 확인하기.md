@@ -22,4 +22,15 @@ log4jdbc.drivers=com.mysql.cj.jdbc.Driver
 log4jdbc.auto.load.popular.drivers=false
 ```
 
-## 3. 
+## 3. application.yml Datasource 변경
+
+![](https://i.imgur.com/b294wyM.png)
+
+
+
+
+```
+driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+url: jdbc:log4jdbc:mysql://localhost:3306/CUGGI?serverTimeZone=Asia/Seoul
+```
+
