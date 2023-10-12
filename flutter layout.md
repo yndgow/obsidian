@@ -1,5 +1,5 @@
+### 플러터 layout 기본학습하기
 
-> 플러터 layout 기본학습하기
 [# Building layouts](https://docs.flutter.dev/ui/layout/tutorial)
 
 ### 1. 프로젝트 생성
@@ -15,9 +15,12 @@
 
 
 ### 2. 폴더 구조 잡기
+
+
 ![](https://i.imgur.com/i6IvZKO.png)
 
 - pubspec.yaml (이미지 설정)
+
 ```yaml
 assets:  
   - assets/lake.jpg
@@ -26,6 +29,7 @@ assets:
 ### 3. 코드 내용
 
 - main.dart
+
 ```dart
 import 'package:flutter/material.dart';  
 import 'package:flutter_layout_01/components/favorited_widte.dart';  
@@ -139,6 +143,7 @@ Column _buildButtonColumn(Color color, IconData icon, String label){
 ```
 
 - components / favorited_widte.dart
+
 ```dart
 import 'package:flutter/material.dart';  
   
@@ -191,6 +196,8 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
 
 ### 4. 결과화면
 
+
 ![](https://i.imgur.com/ttkE6hM.png)
 
 
+![](https://i.imgur.com/4LpsllL.gif)
