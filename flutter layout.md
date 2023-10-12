@@ -1,7 +1,6 @@
 
-
-(ㅣ)[https://docs.flutter.dev/ui/layout/tutorial]
-
+> 플러터 layout 기본학습하기
+[# Building layouts](https://docs.flutter.dev/ui/layout/tutorial)
 
 ### 1. 프로젝트 생성
 
