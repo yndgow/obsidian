@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';  
   
 void main(){  
-  runApp(MyApp());  
+  runApp(const MyApp());  
 }  
   
 class MyApp extends StatelessWidget {  
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,  
   
       home: Scaffold(  
-        appBar: AppBar(title: Text('Calculator'), backgroundColor: Colors.black),  
+        appBar: AppBar(title: const Text('Calculator'), backgroundColor: Colors.black),  
         body: Column(  
           children: [  
             Flexible(  
@@ -76,9 +76,9 @@ class MyApp extends StatelessWidget {
 Container _buildContainerCalResult(Color color, String num){  
   return Container(  
         alignment: Alignment.centerRight,  
-        padding: EdgeInsets.all(15),  
+        padding: const EdgeInsets.all(15),  
         color: color,  
-        child: Text(num, textAlign: TextAlign.end, style: TextStyle(fontSize: 50)),  
+        child: Text(num, textAlign: TextAlign.end, style: const TextStyle(fontSize: 50, color: Colors.white)),  
       );  
 }  
   
@@ -86,7 +86,13 @@ Container _buildContainerNumber(Color color, String num){
   return Container(  
     alignment: Alignment.center,  
     color: color,  
-    child: Text(num, style: TextStyle(fontSize: 30, color: Colors.white)),  
+    child: Text(num, style: const TextStyle(fontSize: 30, color: Colors.white)),  
   );  
 }
 ```
+
+![](https://i.imgur.com/pFYpxq6.png)
+
+
+-  container에 flex를 사용하자
+-  color 값을 hex 코드로 줘야하는데 가져올때 \# 을 뺀 6자리를 사용해야한다.
