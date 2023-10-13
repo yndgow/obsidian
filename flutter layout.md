@@ -1,4 +1,4 @@
-### 플러터 layout 기본학습하기
+# 플러터 layout 기본학습하기
 
 [# Building layouts](https://docs.flutter.dev/ui/layout/tutorial)
 

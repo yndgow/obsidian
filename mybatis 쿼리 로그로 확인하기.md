@@ -1,3 +1,4 @@
+# mybatis 쿼리 로그로 확인하기
 ## 1. 라이브러리 추가
 
 [log4jdbc](https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1/1.16)
