@@ -28,4 +28,12 @@ INSERT ... VALUES (), (), () 를 만들어준다. VALUES 뒤부터 반복 시켜
 </update>
 ```
 
-List 를 업데이트 하는경우 item에는
+List 를 업데이트 하는경우 item에는 사용할 변수명을 쓰고, collection 에는 list 형태임을 밝혀준다.
+
+ ⚠️ UPDATE 를 mybatis에서 foreach를 사용해서 반복시키고자한다면 (아마도 위의 INSERT도 적용되겠지만) 
+```
+ jdbc:mysql://localhost:3306/test?allowMultiQueries=true
+```
+ 
+
+이와같이 allowMultiQueries=true 옵션을 넣어야한다. 이는 mysql 
