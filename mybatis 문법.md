@@ -1,6 +1,6 @@
 # mybiats 문법
 
-## foreach
+## 1. foreach
 
 1. INSERT
 ```xml
@@ -36,4 +36,4 @@ List 를 업데이트 하는경우 item에는 사용할 변수명을 쓰고, col
 ```
  
 
-이와같이 allowMultiQueries=true 옵션을 넣어야한다. 이는 mysql 
+이와같이 allowMultiQueries=true 옵션을 넣어야한다. 이는 아마도 Mysql에서만 적용가능한 옵션인거 같다. 데이터베이스 차이가 있다면 차라리 sql을 service에서 직접 반복시키는게 낫지 않을까?
