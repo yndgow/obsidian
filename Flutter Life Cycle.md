@@ -14,7 +14,7 @@ StatelessWidget은 상태를 가지지 않는 위젯입니다. 그래서 생명�
 
 StatefulWidget은 상태를 가지는 위젯입니다. 그래서 생명주기가 복잡합니다.
 
-- [ ] **StatefulWidget 생명 주기**
+- **StatefulWidget 생명 주기**
     
     1. **Constructor**: **`StatefulWidget`** 인스턴스가 생성됩니다.
     2. **createState**: 새로운 **`State`** 객체를 생성합니다. 이 메서드는 Flutter 프레임워크에 의해 호출됩니다.
@@ -24,8 +24,9 @@ StatefulWidget은 상태를 가지는 위젯입니다. 그래서 생명주기가
     6. **setState**: 상태가 변경될 때마다 호출되어 **`build`** 메서드를 다시 실행합니다. 상태 변경을 트리거합니다.
     7. **didUpdateWidget**: 부모 위젯이 변경되어 현재 위젯의 설정이 변경될 때 호출됩니다.
     8. **dispose**: **`State`** 객체가 위젯 트리에서 제거될 때 호출됩니다. 여기서 리소스 해제와 같은 정리 작업을 수행합니다.
-    
+
     이러한 생명주기 메서드들을 이해하고 올바르게 사용하는 것은 Flutter 앱 개발에서 중요한 부분입니다. 특히, 리소스 관리, 성능 최적화, 그리고 UI 업데이트와 관련된 문제를 해결하기 위해 이러한 메서드들을 적절하게 활용할 수 있어야 합니다.
+
 
 ![](https://i.imgur.com/Eh7cQBO.png)
 
