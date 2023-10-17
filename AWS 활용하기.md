@@ -150,6 +150,16 @@ Module name is invalid. 오류
 ![](https://i.imgur.com/lgoZmZ3.png)
 
 
+톰캣을 설치하고
+```ubuntu
+apt get install tomcat9
+```
+
+파일질라로 tomcat9  - webapps 폴더에 복사 붙여넣기 한다.
+
+![](https://i.imgur.com/y30k7D2.png)
+
+
 
 
 
