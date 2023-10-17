@@ -125,6 +125,30 @@ JAR 는 톰캣이 내장되어 있기 때문에 따로 톰캣을 설치해줄 �
 
 
 
+- EXPORT - WAR 프로
+
+![](https://i.imgur.com/2XVsqgz.png)
+
+
+
+![](https://i.imgur.com/Sx2D62n.png)
+
+
+![](https://i.imgur.com/dUw4CMo.png)
+
+Module name is invalid. 오류
+
+**해결법**
+
+![](https://i.imgur.com/OEQE5sU.png)
+
+
+![0r7AzY5.png](https://i.imgur.com/0r7AzY5.png)
+
+
+
+![](https://i.imgur.com/lgoZmZ3.png)
+
 
 
 
