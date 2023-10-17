@@ -9,3 +9,6 @@ kill pid
 kill -9 PID
 ```
 
+```
+ss -ltn
+```
