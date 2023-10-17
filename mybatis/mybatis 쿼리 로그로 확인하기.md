@@ -1,4 +1,4 @@
-# mybatis 쿼리 로그로 확인하기
+# 1. mybatis 쿼리 로그로 확인하기
 ## 1. 라이브러리 추가
 
 [log4jdbc](https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1/1.16)
@@ -51,3 +51,21 @@ logging:
 	  resultset: off
 	  connection: off
 ```
+
+
+# 2. 간단한 다른 방법
+
+```yml
+mybatis:
+  mapper-locations:
+  - classpath:mapper/**.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    '[org.mybatis]': DEBUG
+```
+
+추가만 해주면 쿼리와 파라미터 결과테이블을 볼 수 있다. 위 방법보다 간단하다.
