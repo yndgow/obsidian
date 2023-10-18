@@ -1,4 +1,4 @@
-# AWS로 mysql DB 사용하기
+# AWS 서버 사용하기
 ### 1. 가입하기
 가입시 이메일과 해외결제 가능한 신용, 체크카드, 휴대폰이 필요하다.
 
@@ -83,45 +83,16 @@ sudo service ssh restart
 ### 7. war 배포하기
 
 ⚠️ JSP 프로젝트는 JAR 배포가 안된다고 한다. 
-JAR 는 톰캣이 내장되어 있기 때문에 따로 톰캣을 설치해줄 필요가 없지만 JSP는 파일 내부구조상 JSP파일들이 빌드되지 않으므로 WAR로 배포해야한다.
+JSP는 파일 내부구조상 JSP파일들이 빌드되지 않으므로 WAR로 배포해야한다.
+
+- bootWar 사용하기
+
+기존 Export - war 파일은 jsp 가 담기지 않고 외부 톰캣으로 같이쓰려고 했으나 실패했다. 그러다 bootWar 명령어(gradle)를 사용하여
 
 
 
-- EXPORT - WAR 프로
 
-![](https://i.imgur.com/2XVsqgz.png)
-
-
-
-![](https://i.imgur.com/Sx2D62n.png)
-
-
-![](https://i.imgur.com/dUw4CMo.png)
-
-Module name is invalid. 오류
-
-**해결법**
-
-![](https://i.imgur.com/OEQE5sU.png)
-
-
-![0r7AzY5.png](https://i.imgur.com/0r7AzY5.png)
-
-
-
-![](https://i.imgur.com/lgoZmZ3.png)
-
-
-톰캣을 설치하고
-```ubuntu
-apt get install tomcat9 tomcat9-admin
-```
-
-파일질라로 tomcat9  - webapps 폴더에 복사 붙여넣기 한다.
-
-![](https://i.imgur.com/y30k7D2.png)
-
-8080 포트 확인하기
+포트 확인하기
 
 ```
 ss -ltn
