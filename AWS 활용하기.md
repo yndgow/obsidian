@@ -1,32 +1,13 @@
 
+# [[1. AWS 서버 사용하기]]
+## [[2. AWS Mysql]]
 
-## 6. [[AWS Mysql]]
-
-### 7. war 배포하기
-
-⚠️ JSP 프로젝트는 JAR 배포가 안된다고 한다. 
-JSP는 파일 내부구조상 JSP파일들이 빌드되지 않으므로 WAR로 배포해야한다.
-
-- bootWar 사용하기
-
-기존 Export - war 파일은 jsp 가 담기지 않고 외부 톰캣으로 같이쓰려고 했으나 실패했다. 그러다 bootWar 명령어(gradle)를 사용하여
+# [[3. AWS에 스프링 프로젝트 배포하기]]
 
 
 
 
-포트 확인하기
 
-```
-ss -ltn
-```
-
-ubuntu OS가 재시작 되면 Tomcat 자동 재시작하기
-
-```
-systemctl enable tomcat9.service
-<->
-systemctl disable tomcat9.service
-```
 
 
 
