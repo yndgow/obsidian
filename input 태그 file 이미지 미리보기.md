@@ -1,4 +1,8 @@
 
+참고문서
+https://developer.mozilla.org/ko/docs/Web/API/FileReader
+
+
 ```js
 // 이미지 미리보기
 function readURL(input) { // input type="file" 가져오기
