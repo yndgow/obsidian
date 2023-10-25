@@ -39,3 +39,112 @@ https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
 
 구조잡기
+```
+class Product{  
+  String productId;  
+  String productName;  
+  double price;  
+  
+  Product(this.productId, this.productName, this.price);  
+}
+```
+
+```
+import 'package:class_my_cart/models/product.dart';  
+import 'package:flutter/material.dart';  
+  
+class ProductList extends StatelessWidget {  
+  ProductList({super.key});  
+  
+  // 샘플 데이터 --> view_model로 옮길 예정  
+  List<Product> productList = List.generate(10, (index) => Product('p_$index', '상품 $index', 1000));  
+  
+  @override  
+  Widget build(BuildContext context) {  
+    return ListView.builder(  
+      itemBuilder: (ctx, index) {  
+        return ListTile(  
+          leading: Text('${productList[index].productId}'),  
+          title: Text('${productList[index].productName}'),  
+          trailing: IconButton(  
+            icon: Icon(Icons.shopping_cart),  
+            onPressed: () {  
+              // 로직 추가 예정  
+  
+            },  
+          ),  
+        );  
+      },  
+      itemCount: productList.length,);  
+  }  
+}
+```
+
+```
+import 'package:class_my_cart/view/product_list.dart';  
+import 'package:flutter/material.dart';  
+  
+void main() {  
+  runApp(MyApp());  
+}  
+  
+class MyApp extends StatefulWidget {  
+  const MyApp({super.key});  
+  
+  @override  
+  State<MyApp> createState() => _MyAppState();  
+}  
+  
+class _MyAppState extends State<MyApp> {  
+  @override  
+  Widget build(BuildContext context) {  
+    return MaterialApp(  
+      home: SafeArea(  
+        child: Scaffold(  
+          body: IndexedStack(  
+            children: [  
+              ProductList(),  
+            ],  
+          ),  
+        ),  
+      ),  
+    );  
+  }  
+}
+```
+
+```
+import 'package:class_my_cart/models/product.dart';  
+import 'package:flutter/material.dart';  
+  
+class MyCart extends StatelessWidget {  
+  MyCart({super.key});  
+  
+  // 샘플 데이터 --> view_model로 옮길 예정  
+  List<Product> cartList = List.generate(2, (index) =>  
+      Product('p_$index', '상품 $index', 1000)  
+  );   
+  
+  @override  
+  Widget build(BuildContext context) {  
+    return Column(  
+      children: [  
+        Row(  
+          children: [  
+            const Icon(  
+              Icons.shopping_cart,  
+              size: 30, color: Colors.orangeAccent,  
+            ),  
+            Text(  
+              '${cartList.length} 개',  
+              style: const TextStyle(  
+                  fontSize: 30,  
+                  fontWeight: FontWeight.bold)  
+              ,)  
+          ],  
+        )  
+      ],  
+    );  
+  }  
+}
+```
