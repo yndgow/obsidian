@@ -33,12 +33,11 @@ https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
 
 
+## 2. 코드 작성
+
+### 1. 구조잡기
 
 
-
-
-
-구조잡기
 ```dart
 class Product{  
   String productId;  
