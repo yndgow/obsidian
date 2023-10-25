@@ -39,7 +39,7 @@ https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
 
 구조잡기
-```
+```dart
 class Product{  
   String productId;  
   String productName;  
@@ -49,7 +49,7 @@ class Product{
 }
 ```
 
-```
+```dart
 import 'package:class_my_cart/models/product.dart';  
 import 'package:flutter/material.dart';  
   
@@ -80,7 +80,7 @@ class ProductList extends StatelessWidget {
 }
 ```
 
-```
+```dart
 import 'package:class_my_cart/view/product_list.dart';  
 import 'package:flutter/material.dart';  
   
@@ -113,7 +113,7 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-```
+```dart
 import 'package:class_my_cart/models/product.dart';  
 import 'package:flutter/material.dart';  
   
@@ -146,5 +146,32 @@ class MyCart extends StatelessWidget {
       ],  
     );  
   }  
+}
+```
+
+```dart
+AppBar buildAppBar() {  
+  return AppBar(  
+    title: const Text('Tenco 쇼핑'),  
+    actions: const [  
+      Center(  
+        child: Stack(  
+          children: [  
+            Icon(Icons.shopping_cart),  
+            Positioned(  
+              top: 0,  
+              right: 0,  
+              child: CircleAvatar(  
+                radius: 8.0,  
+                backgroundColor: Colors.redAccent,  
+                child: Text('2'),  
+              ),  
+            ),  
+          ],  
+        ),  
+      ),  
+      SizedBox(width: 12.0,)  
+    ],  
+  );  
 }
 ```
