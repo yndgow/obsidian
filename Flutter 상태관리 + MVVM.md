@@ -37,6 +37,10 @@ https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
 ### 1. 구조잡기
 
+![](https://i.imgur.com/cIL3ygP.png)
+
+### 2. 코드
+
 - product
 
 ```dart
@@ -48,6 +52,91 @@ class Product{
   Product(this.productId, this.productName, this.price);  
 }
 ```
+
+- my_cart
+
+```dart
+import 'package:flutter/material.dart';  
+import '../view_models/my_cart_view_model.dart';  
+  
+class MyCart extends StatelessWidget {  
+  final MyCartViewModel myCartVm;  
+  MyCart({required this.myCartVm ,super.key});  
+  
+  @override  
+  Widget build(BuildContext context) {  
+    return Column(  
+      mainAxisAlignment: MainAxisAlignment.center,  
+      children: [  
+        Row(  
+          mainAxisAlignment: MainAxisAlignment.center,  
+          children: [  
+            const Icon(  
+              Icons.shopping_cart,  
+              size: 30, color: Colors.orangeAccent,  
+            ),  
+            Text(  
+              '${myCartVm.items.length} 개',  
+              style: const TextStyle(  
+                  fontSize: 30,  
+                  fontWeight: FontWeight.bold)  
+              ,)  
+          ],  
+        )  
+      ],  
+    );  
+  }  
+}
+```
+
+- product_list
+
+```dart
+import 'package:flutter/material.dart';  
+import '../view_models/my_cart_view_model.dart';  
+import '../view_models/product_list_view_model.dart';  
+  
+class ProductList extends StatefulWidget {  
+  
+  final ProductListViewModel productVm;  
+  final MyCartViewModel myCartVm;  
+  
+  ProductList({required this.productVm ,super.key, required this.myCartVm});  
+  @override  
+  State<ProductList> createState() => _ProductListState();  
+}  
+  
+// statefulWidget 으로 변경, 상위클래스, 하위클래스가 존재  
+// 하위 클래스에서 --> 상위 클래스에 접근하기 위해 widget을 참조 변수를 제공합니다.  
+// 즉 widget은 StatefulWidget 클래스의 인스턴스를 참조하며, 이를 통해 부모 위젯으로부터  
+// 데이터를 전달받거나 부모 위젯의 메서드를 호출할 수 있습니다.  
+class _ProductListState extends State<ProductList> {  
+ // DI 외부에서 생성자를 통해서 데이터를 주입  
+  @override  
+  Widget build(BuildContext context) {  
+    return ListView.builder(  
+      itemBuilder: (ctx, index) {  
+        return ListTile(  
+          leading: Text('${widget.productVm.products[index].productId}'),  
+          title: Text('${widget.productVm.products[index].productName}'),  
+          trailing: IconButton(  
+            icon: Icon(Icons.shopping_cart),  
+            onPressed: () {  
+              // 로직 추가 예정  
+              setState(() {  
+                widget.myCartVm.addProduct(widget.productVm.products[index]);  
+              });  
+            },  
+          ),  
+        );  
+      },  
+      itemCount: widget.productVm.products.length,);  
+  }  
+}
+```
+
+- 
+
 
 - my_cart_view_model
 
