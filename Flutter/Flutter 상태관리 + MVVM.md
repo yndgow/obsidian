@@ -135,9 +135,6 @@ class _ProductListState extends State<ProductList> {
 }
 ```
 
-- 
-
-
 - my_cart_view_model
 
 ```dart
@@ -162,4 +159,14 @@ class MyCartViewModel{
 ```
 
 
+- product_list_view_model
 
+```dart
+import '../models/product.dart';  
+  
+class ProductListViewModel{  
+  final List<Product> _productList = List.generate(10, (index) => 
+	  Product('p_$index', '상품 $index', 1000));  
+  List<Product> get products => _productList;  
+}
+```
