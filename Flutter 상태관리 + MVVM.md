@@ -37,6 +37,7 @@ https://docs.flutter.dev/data-and-backend/state-mgmt/intro
 
 ### 1. 구조잡기
 
+- product
 
 ```dart
 class Product{  
@@ -48,145 +49,7 @@ class Product{
 }
 ```
 
-```dart
-import 'package:class_my_cart/models/product.dart';  
-import 'package:flutter/material.dart';  
-  
-class ProductList extends StatelessWidget {  
-  ProductList({super.key});  
-  
-  // 샘플 데이터 --> view_model로 옮길 예정  
-  List<Product> productList = List.generate(10, (index) => Product('p_$index', '상품 $index', 1000));  
-  
-  @override  
-  Widget build(BuildContext context) {  
-    return ListView.builder(  
-      itemBuilder: (ctx, index) {  
-        return ListTile(  
-          leading: Text('${productList[index].productId}'),  
-          title: Text('${productList[index].productName}'),  
-          trailing: IconButton(  
-            icon: Icon(Icons.shopping_cart),  
-            onPressed: () {  
-              // 로직 추가 예정  
-  
-            },  
-          ),  
-        );  
-      },  
-      itemCount: productList.length,);  
-  }  
-}
-```
-
-```dart
-import 'package:class_my_cart/view/product_list.dart';  
-import 'package:flutter/material.dart';  
-  
-void main() {  
-  runApp(MyApp());  
-}  
-  
-class MyApp extends StatefulWidget {  
-  const MyApp({super.key});  
-  
-  @override  
-  State<MyApp> createState() => _MyAppState();  
-}  
-  
-class _MyAppState extends State<MyApp> {  
-  @override  
-  Widget build(BuildContext context) {  
-    return MaterialApp(  
-      home: SafeArea(  
-        child: Scaffold(  
-          body: IndexedStack(  
-            children: [  
-              ProductList(),  
-            ],  
-          ),  
-        ),  
-      ),  
-    );  
-  }  
-}
-```
-
-```dart
-import 'package:class_my_cart/models/product.dart';  
-import 'package:flutter/material.dart';  
-  
-class MyCart extends StatelessWidget {  
-  MyCart({super.key});  
-  
-  // 샘플 데이터 --> view_model로 옮길 예정  
-  List<Product> cartList = List.generate(2, (index) =>  
-      Product('p_$index', '상품 $index', 1000)  
-  );   
-  
-  @override  
-  Widget build(BuildContext context) {  
-    return Column(  
-      children: [  
-        Row(  
-          children: [  
-            const Icon(  
-              Icons.shopping_cart,  
-              size: 30, color: Colors.orangeAccent,  
-            ),  
-            Text(  
-              '${cartList.length} 개',  
-              style: const TextStyle(  
-                  fontSize: 30,  
-                  fontWeight: FontWeight.bold)  
-              ,)  
-          ],  
-        )  
-      ],  
-    );  
-  }  
-}
-```
-
-```dart
-AppBar buildAppBar() {  
-  return AppBar(  
-    title: const Text('Tenco 쇼핑'),  
-    actions: const [  
-      Center(  
-        child: Stack(  
-          children: [  
-            Icon(Icons.shopping_cart),  
-            Positioned(  
-              top: 0,  
-              right: 0,  
-              child: CircleAvatar(  
-                radius: 8.0,  
-                backgroundColor: Colors.redAccent,  
-                child: Text('2'),  
-              ),  
-            ),  
-          ],  
-        ),  
-      ),  
-      SizedBox(width: 12.0,)  
-    ],  
-  );  
-}
-```
-
-
-```dart
-import '../models/product.dart';  
-  
-class ProductListViewModel{  
-  // 샘플 데이터 --> view_model로 옮길 예정(통신)  
-  final List<Product> _productList = List.generate(10, (index) => Product('p_$index', '상품 $index', 1000));  
-  
-  List<Product> get products => _productList;  
-  
-}
-```
+- my_cart_view_model
 
 ```dart
 import '../models/product.dart';  
@@ -208,4 +71,6 @@ class MyCartViewModel{
   }  
 }
 ```
+
+
 
