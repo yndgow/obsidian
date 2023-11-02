@@ -1,3 +1,38 @@
+
+> JWT 가 적용된 스프링 서버를 사용합니다.
+
+## 0. 사전준비
+
+ 1. 스프링 서버
+
+https://yndgow.tistory.com/91
+
+2. DB 생성(데이터베이스명 : todo)
+
+```sql
+-- todo.todo_tb definition
+CREATE TABLE `todo_tb` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `userId` int NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `completed` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+
+```sql
+-- todo.user_tb definition
+CREATE TABLE `user_tb` (
+  `userId` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(512) NOT NULL,
+  PRIMARY KEY (`userId`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+
+
 ### 1. 구조잡기
 
 ![](https://i.imgur.com/BAT46Wc.png)
@@ -200,4 +235,6 @@ void main(){
 
 
 ### 3. 테스트 결과
+
+![](https://i.imgur.com/x9hrLP9.png)
 
