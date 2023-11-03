@@ -1,12 +1,13 @@
 
-### 가입하기 기능 추가
+로그인에 이어 가입하기 기능 추가입니다.
 
-1. 구조잡기
+### 1.  구조잡기
 
 ![](https://i.imgur.com/c4WbLhL.png)
 
 
-2. 코드
+### 2. 코드
+
 - models / dto / todo_dto
 
 ```dart
